@@ -1,0 +1,208 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+bkmysql
+</name>
+</assembly>
+<members>
+<member name="P:bkmysql.Xlist.Keys">
+	<summary>
+ 获取所有的键名
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:bkmysql.Xlist.Items(System.String)">
+	<summary>
+ 获取一个键的值
+ </summary>
+	<param name="k"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:bkmysql.Xlist.Items(System.Int32)">
+	<summary>
+ 获取一个序号的值
+ </summary>
+	<param name="index"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Add(System.String,System.Object)">
+	<summary>
+ 添加一个键和值，如果此键已经存在，就修改此键的值
+ </summary>
+	<param name="k">键名</param>
+	<param name="value">要添加的键的值</param>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Add(System.Object)">
+	<summary>
+ 添中一个键和值 ，键名是下一个序号
+ </summary>
+	<param name="value">要添加的键的值</param>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.ValueAdd(System.String,System.String)">
+	<summary>
+ 将k键的值加上一值，如果是数字就相加，是字符就合并,如果不存在此键就添加此键
+ </summary>
+	<param name="k"></param>
+	<param name="v"></param>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.SortByKey">
+	<summary>
+ 按键名排序
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.SortByValue">
+	<summary>
+ 按值排序
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Sort">
+	<summary>
+ 键按从小到大排列，值按从大到小排列
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Flip">
+	<summary>
+ 键和值交换，如果原来的值有重复的，只会保留最后一个,如果原值是nothing ,则丢弃
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Remove(System.String)">
+	<summary>
+ 移除指定的键和值
+ </summary>
+	<param name="k"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Clear">
+	<summary>
+ 清除全部的键和值
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Remove(System.Int32)">
+	<summary>
+ 移除指定位置的键和值
+ </summary>
+	<param name="index"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Count">
+	<summary>
+ 序列中的总数
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.Str2List(System.String,System.Char)">
+	<summary>
+ 将字符串根据k的位置分割成list数组
+ </summary>
+	<param name="str"></param>
+	<param name="k"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.Xlist.List2Str(System.Char,System.Object[])">
+	<summary>
+ 将数组用k连接成字符串
+ </summary>
+	<param name="k"></param>
+	<param name="li"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:bkmysql.Xlist">
+	<summary>
+ 用键值和键名组成List
+ </summary>
+	<remarks></remarks>
+</member><member name="M:bkmysql.mysqldbX.selectUnionTB(System.Collections.Generic.List{System.String},System.String,System.Int32,System.Int32,System.String,System.Boolean,System.String[])">
+	<summary>
+ 查询几个表，将数据合并成一个表
+ </summary>
+	<param name="tblist">要查询的表</param>
+	<param name="where">条件</param>
+	<param name="st">从第几条开始</param>
+	<param name="lt">一共查询几条</param>
+	<param name="order">排序</param>
+	<param name="unionAll">是否保留重复行</param>
+	<param name="col">要显示的字段，排序的字段必须要包含在内</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.mysqldbX.selectUnionTB(System.Collections.Generic.List{System.String},System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+	<summary>
+ 查询几个表，将数据合并成一个表
+ </summary>
+	<param name="tblist">要查询的表</param>
+	<param name="where">条件</param>
+	<param name="st">从第几条开始</param>
+	<param name="lt">一共查询几条</param>
+	<param name="order">排序</param>
+	<param name="unionAll">是否删除重复行</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.mysqldbX.userinput(System.String,bkmysql.mysqldbX.UserInputType)">
+	<summary>
+ 检测输入的数据是否是由字符和数字组成的
+ </summary>
+	<param name="str"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:bkmysql.mysqldbX.downloadfile(System.String,System.String)">
+	<summary>
+ 从一个网站下载文件
+ </summary>
+	<param name="url">网页地址</param>
+	<param name="filename">要保存的文件名</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.sql">
+	<summary>
+ 消除“ 、‘、*和空格
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.onlyNum">
+	<summary>
+ 只准输入数字
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.onlyStr">
+	<summary>
+ 只准输入字母
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.notNum">
+	<summary>
+ 不准输入数字
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.notStr">
+	<summary>
+ 不准输入字母
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.StrAndNum">
+	<summary>
+ 只能输入字母和数字
+ </summary>
+	<remarks></remarks>
+</member><member name="F:bkmysql.mysqldbX.UserInputType.StrAndDou">
+	<summary>
+ 只能输入字母和数字和小数点
+ </summary>
+	<remarks></remarks>
+</member><member name="P:bkmysql.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:bkmysql.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:bkmysql.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
